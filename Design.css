@@ -1,0 +1,391 @@
+/*estilo geral*/
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: Arial;
+  /* border: 1px solid #ffc000;*/
+}
+
+body{
+    background-color: black;
+    height: 100vh;
+}
+.grafico{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+.flexivel{
+    display: flex;
+}
+
+.botao button{
+    padding: 10px 40px;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #ffc000;
+    border: 0;
+    border-radius: 380px;
+    cursor: pointer;
+    transition: .2s
+}
+
+.botao button:hover{
+    box-shadow: 0px 0px 9px #ffc000;
+    transition: .2s;
+    transform: scale(1.1)
+}
+
+h2.titulo{
+    color: white; 
+    text-align: center;
+    font-size: 28pt
+} 
+
+span{
+    color: #ffc000; 
+}
+
+/*estilo cabeçalho*/
+header{
+    padding: 40px 4%; 
+}
+
+header > .grafico{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a{
+    text-decoration: none;
+    color: rgb(70, 70, 70);
+    display: inline-block;
+    transition: .2s;
+}
+
+header nav.ambiente a:hover{
+    color: white;
+    transform: scale(1.1);
+}
+
+header nav ul{
+    list-style-type: none;
+}
+
+header nav.ambiente ul li{
+    display: inline-block;
+    padding: 0 40px;
+}
+
+/*Modo-Telefone*/
+
+.modo-telemovel{
+    background-color: rgb(0, 0, 0);
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 9999; 
+    width: 0%;
+    overflow: hidden;
+    transition: .5s;
+
+} 
+
+.modo-telemovel nav ul{
+    text-align: right;
+}
+
+.modo-telemovel nav ul li a{
+      color: rgb(255, 255, 255);
+      font-size: 18pt; 
+      padding: 18px 3%;
+      display: block;
+}
+
+.modo-telemovel nav ul li a:hover{
+    background-color: #ffc000;
+}
+
+.modo-telemovel .botao-fechar{
+    padding: 20px 5%;
+}
+
+header .overlay-menu{
+    background-color: rgba(0, 0, 0, 0.719);
+    width: 100%;
+    height: 100%;
+    position:fixed;
+    top:0;
+    left: 0;
+    z-index: 8888;
+    display: none;
+}
+
+.modo-telemovel.abrir-menu{
+    width: 70%;
+}
+
+.modo-telemovel.abrir-menu ~ .overlay-menu{
+    display: block;
+}
+
+/*Topo*/ 
+
+section.topo{
+    padding: 40px 4%;
+}
+section.topo .flexivel{
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+
+.texto-topo h1{
+    color:white;
+    font-size: 42px;
+    line-height: 40px;
+}
+
+.texto-topo p{
+    color: white;
+    margin: 40px 0px;
+}
+
+.imagem-topo img{
+    border-radius: 50px;
+    box-shadow: 0px 0px 8px 2px #ffc000;
+}
+.topo .imagem-topo img{
+    position: relative;
+    animation: flutuante 2s ease-in-out infinite alternate;  
+}
+
+@keyframes flutuante{
+    0%{
+        top: 0px;       
+    }
+
+    100%{
+        top: 30px;
+    }
+}
+
+/*Areas*/
+
+section.Areas{
+    padding: 70px 4%;
+    box-shadow: 0px 0px 10px 1px #5f4700;
+}    
+
+section.Areas .flexivel{
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+    margin-top: 70px;
+}
+
+.Areas .A1, .A2, .A3{
+    color: white;
+    border-radius: 10px;
+}
+
+.Areas .flexivel div:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 0px 8px #926e01;
+    transition: .2s;
+}
+
+.Areas .A1 img, .A2 img, .A3 img, p{
+    padding: 20px 4%; 
+}
+.Areas h3{
+    padding-left:4px;
+}
+
+/*Histórico*/
+
+section.Historico{
+    padding: 70px 4%; 
+}
+
+section.Historico .flexivel{
+    align-items: center;
+    gap: 90px;
+}
+
+section.Historico .imagem-H > img{
+    border-radius: 14px;
+}
+section.Historico .texto-H{
+    color: white;
+}
+
+section.Historico .texto-H h2{
+    font-size: 30px;
+    line-height: 30px 
+}
+
+section.Historico .midia img{
+    padding: 0px 10px;
+}
+
+.midia > a{
+    display: inline-block;
+}
+
+.midia > a:hover{
+    transition: .2s;
+    transform: scale(1.1)
+}
+
+/*Projectos*/
+
+section.Projectos{
+    padding: 80px 4%;
+    box-shadow: 0px 0px 10px 1px #5f4700;  
+}
+
+section.Projectos .A4{
+    width: 250px;
+    height: 280px;
+    background-color: #2bff00;
+    background-position: 100% 0%;
+    background-size: cover;
+    transition: 3s;
+    cursor: pointer;
+    border-radius: 25px;
+    position: relative;
+}
+
+section.Projectos .flexivel{
+    margin: 50px 0px;
+    justify-content: space-around
+}
+
+section.Projectos .A4:hover{
+    background-position: 100% 100%;
+}
+
+section.Projectos .A4 .CapaPreta{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14pt;
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    border-radius: 25px;
+    transition: .5s;
+    opacity:0;
+    background-color: #000000be;
+}
+
+section.Projectos .A4 .CapaPreta:hover{
+    opacity: 1;
+}
+
+/*Formulario*/
+
+section.Formulario {
+    padding: 40px 4%;
+}
+
+form{
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 30px;
+}
+form input, textarea{
+    width: 100%;
+    background-color: #5e5c5c7a;
+    border: 0;
+    border-radius: 15px;
+    padding: 14px;
+    color: white;
+    font-size: 12pt
+}
+
+form input::placeholder{
+    color: #ffbf008f
+}
+ form textarea{
+     resize: none;
+     max-height: 200px
+ }
+
+ form .botao1{
+     margin-top: 20px;
+     text-align: center
+ }
+
+ form .botao1 input{
+     width :100px;
+     background-color: #ffc000;
+     color: black;
+     font-weight: bold;
+     cursor: pointer;
+     transition: .3s 
+    
+ }
+
+ form .botao1 input:hover{
+     box-shadow: 0px 0px 8px #ffc000;
+     transform: scale(1.1);
+ }
+
+ /*Rodapé*/
+
+ footer{
+     padding: 60px 4%;
+     box-shadow: 0px 0px 8px #926e01
+ }
+
+ footer .flexivel{
+     justify-content: space-between;
+ }
+footer .linha .midia img{
+    padding-top: 30px;
+    padding-right: 10px;
+} 
+footer .linha1 p a{
+     color: white;
+     font-weight: bold;
+     text-decoration: none;
+ }
+
+ footer .linha1{
+    margin-top: 20px; 
+    border-top: 2px solid #ffc000;
+ }
+
+ /*@media screen and (max-width: 3020px){
+     
+    .flexivel{
+        flex-direction: column-reverse;
+     }
+
+     .ambiente, .botao{
+         display: none;
+     }
+
+     section.Projectos .flexivel{
+        align-items: center;
+        gap: 40px;
+    }
+
+    footer .flexivel{
+        flex-direction: column;
+    }
+
+    footer .linha .logof, .midia,.linha1{
+        text-align: center;
+    }
+ }*/
